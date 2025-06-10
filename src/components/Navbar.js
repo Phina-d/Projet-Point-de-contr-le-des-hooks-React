@@ -1,10 +1,19 @@
+// src/components/Navbar.js
 import React from "react";
+import { Link } from "react-router-dom";
+import { FaMoon, FaSun } from "react-icons/fa";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Navbar = ({ darkMode, toggleDarkMode }) => {
   return (
-    <nav className={`navbar navbar-expand-lg ${darkMode ? "navbar-dark bg-dark" : "navbar-light bg-primary"}`}>
+    <nav className={`navbar navbar-expand-lg ${darkMode ? "navbar-dark bg-dark" : "navbar-light bg-light"} shadow`}>
       <div className="container">
-        <a className="navbar-brand" href="#">🎬 MovieApp</a>
+        {/* Brand */}
+        <Link className="navbar-brand fw-bold fs-4" to="/">
+          🎬 My Movies
+        </Link>
+
+        {/* Toggler for mobile */}
         <button
           className="navbar-toggler"
           type="button"
@@ -14,27 +23,28 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span className="navbar-toggler-icon" />
+          <span className="navbar-toggler-icon"></span>
         </button>
-        <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav ms-auto align-items-center">
+
+        {/* Nav items aligned to the right */}
+        <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul className="navbar-nav align-items-center">
             <li className="nav-item">
-              <a className="nav-link active" href="#">Accueil</a>
+              <Link className="nav-link" to="/">Accueil</Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">Films</a>
+              <Link className="nav-link" to="/films">Films</Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">Contact</a>
+              <Link className="nav-link" to="/contact">Contact</Link>
             </li>
-            <li className="nav-item">
-              {/* Toggle mode sombre */}
+            <li className="nav-item ms-3">
               <button
+                className={`btn btn-sm ${darkMode ? "btn-outline-light" : "btn-outline-dark"}`}
                 onClick={toggleDarkMode}
-                className={`btn btn-sm ${darkMode ? "btn-light" : "btn-dark"} ms-3`}
-                title="Changer le thème"
+                title="Mode sombre"
               >
-                {darkMode ? <i className="fas fa-sun"></i> : <i className="fas fa-moon"></i>}
+                {darkMode ? <FaSun /> : <FaMoon />}
               </button>
             </li>
           </ul>

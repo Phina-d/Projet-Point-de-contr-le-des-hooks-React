@@ -1,4 +1,4 @@
-const movies = [
+const moviesData = [
   {
     id: 1,
     title: "Inception",
@@ -8,10 +8,14 @@ const movies = [
     genre: "Science-fiction, Thriller",
     duration: 148,
     year: 2010,
-    trailerURL: "https://www.youtube.com/watch?v=YoHD9XEInc0" // ajouté ici
-  
+    director: "Christopher Nolan",
+    actors: ["Leonardo DiCaprio", "Joseph Gordon-Levitt", "Elliot Page"],
+    language: "Anglais",
+    country: "États-Unis",
+    synopsis: "Dom Cobb est un voleur expérimenté, le meilleur dans l'art périlleux de l'extraction : voler des secrets enfouis au plus profond du subconscient.",
+    awards: "4 Oscars, 152 autres récompenses",
+    trailerURL: "https://www.youtube.com/watch?v=YoHD9XEInc0"
   },
-  
   {
     id: 2,
     title: "Interstellar",
@@ -21,6 +25,12 @@ const movies = [
     genre: "Science-fiction, Drame",
     duration: 169,
     year: 2014,
+    director: "Christopher Nolan",
+    actors: ["Matthew McConaughey", "Anne Hathaway", "Jessica Chastain"],
+    language: "Anglais",
+    country: "États-Unis",
+    synopsis: "Alors que la Terre se meurt, un groupe d'explorateurs voyage au-delà de notre galaxie pour tenter de trouver un nouveau foyer à l'humanité.",
+    awards: "1 Oscar, 43 autres récompenses",
     trailerURL: "https://www.youtube.com/watch?v=zSWdZVtXT7E"
   },
   {
@@ -32,10 +42,16 @@ const movies = [
     genre: "Action, Crime, Drame",
     duration: 152,
     year: 2008,
+    director: "Christopher Nolan",
+    actors: ["Christian Bale", "Heath Ledger", "Aaron Eckhart"],
+    language: "Anglais",
+    country: "États-Unis",
+    synopsis: "Batman fait face à un criminel sadique connu sous le nom de Joker, qui sème le chaos à Gotham.",
+    awards: "2 Oscars, 159 autres récompenses",
     trailerURL: "https://www.youtube.com/watch?v=EXeTwQWrcwY"
   },
   {
-  id: 4,
+    id: 4,
     title: "The Matrix",
     description: "Un classique de science-fiction philosophique.",
     posterURL: "https://image.tmdb.org/t/p/w500/f89U3ADr1oiB1s9GkdPOEpXUk5H.jpg",
@@ -43,6 +59,12 @@ const movies = [
     genre: "Science-fiction, Action",
     duration: 136,
     year: 1999,
+    director: "Lana Wachowski, Lilly Wachowski",
+    actors: ["Keanu Reeves", "Laurence Fishburne", "Carrie-Anne Moss"],
+    language: "Anglais",
+    country: "États-Unis",
+    synopsis: "Un pirate informatique découvre que la réalité dans laquelle il vit est une simulation créée par des machines.",
+    awards: "4 Oscars, 42 autres récompenses",
     trailerURL: "https://www.youtube.com/watch?v=vKQi3bBA1y8"
   },
   {
@@ -54,6 +76,12 @@ const movies = [
     genre: "Drame",
     duration: 139,
     year: 1999,
+    director: "David Fincher",
+    actors: ["Brad Pitt", "Edward Norton", "Helena Bonham Carter"],
+    language: "Anglais",
+    country: "États-Unis",
+    synopsis: "Un employé de bureau insomniaque forme un club de combat clandestin avec un vendeur de savon extraverti.",
+    awards: "1 nomination aux Oscars, 11 autres récompenses",
     trailerURL: "https://www.youtube.com/watch?v=SUXWAEX2jlg"
   },
   {
@@ -65,8 +93,48 @@ const movies = [
     genre: "Crime, Drame",
     duration: 154,
     year: 1994,
+    director: "Quentin Tarantino",
+    actors: ["John Travolta", "Uma Thurman", "Samuel L. Jackson"],
+    language: "Anglais",
+    country: "États-Unis",
+    synopsis: "Diverses histoires s'entrecroisent dans le monde souterrain du crime à Los Angeles.",
+    awards: "1 Oscar, 70 autres récompenses",
     trailerURL: "https://www.youtube.com/watch?v=s7EdQ4FqbhY"
+  },
+  {
+    id: 999,
+    title: "Dune",
+    description: "Dans un futur lointain, Paul Atreides doit survivre sur la planète désertique Arrakis.",
+    posterURL: "https://image.tmdb.org/t/p/w500/d5NXSklXo0qyIYkgV94XAgMIckC.jpg",
+    rating: 8.3,
+    genre: "Science-fiction",
+    duration: 155,
+    year: 2021,
+    director: "Denis Villeneuve",
+    actors: ["Timothée Chalamet", "Rebecca Ferguson", "Oscar Isaac"],
+    language: "Anglais",
+    country: "États-Unis",
+    synopsis: "Un jeune homme doué se lance dans une quête sur une planète hostile pour sauver sa famille et son peuple.",
+    awards: "6 Oscars, 59 autres récompenses",
+    trailerURL: "https://www.youtube.com/watch?v=n9xhJrPXop4"
+  },
+  {
+    id: 1000,
+    title: "Inception (Version 2)",
+    description: "Un voleur est capable d'entrer dans les rêves pour y implanter des idées.",
+    posterURL: "https://image.tmdb.org/t/p/w500/8tNX8s3j1O0eqilOQkuroRLyOZA.jpg",
+    rating: 8.8,
+    genre: "Science-fiction, Thriller",
+    duration: 148,
+    year: 2010,
+    director: "Christopher Nolan",
+    actors: ["Leonardo DiCaprio", "Joseph Gordon-Levitt", "Elliot Page"],
+    language: "Anglais",
+    country: "États-Unis",
+    synopsis: "Dom Cobb est un voleur expérimenté dans l’art d’implanter des idées dans les rêves.",
+    awards: "4 Oscars, 152 autres récompenses",
+    trailerURL: "https://www.youtube.com/watch?v=8hP9D6kZseM"
   }
 ];
 
-export default movies;
+export default moviesData;

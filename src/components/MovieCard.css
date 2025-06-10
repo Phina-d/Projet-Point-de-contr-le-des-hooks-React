@@ -1,0 +1,43 @@
+.movie-card {
+  width: 18rem;
+  margin: 0 auto;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+
+.movie-card:hover {
+  transform: scale(1.03);
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.custom-btn-danger {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.custom-btn-danger:hover {
+  background-color: #bb2d3b;
+  transform: scale(1.05);
+}
+
+.custom-btn-info {
+  background-color: #0dcaf0;
+  color: white;
+  border: none;
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.custom-btn-info:hover {
+  background-color: #0aa2c0;
+  transform: scale(1.05);
+}

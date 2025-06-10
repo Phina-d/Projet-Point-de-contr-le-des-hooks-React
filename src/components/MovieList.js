@@ -1,18 +1,27 @@
-import React, { useState } from "react";
+import React from "react";
 import MovieCard from "./MovieCard";
-import Sort from "./Sort"; // ton composan
-const MovieList = ({ movies, handleDelete }) => (
-  
-  <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}>
-    {movies.map((movie) => (
-      <MovieCard
-        key={movie.id}
-        movie={movie}
-        onDelete={handleDelete} // <- IMPORTANT : ici on appelle bien onDelete
-      />
-    ))}
-  </div>
-);
 
+const MovieList = ({ movies, handleDelete }) => {
+  if (!movies || movies.length === 0) {
+    return (
+      <div className="container mt-4">
+        <p className="text-center">Aucun film trouvé.</p>
+      </div>
+    );
+  }
+
+  return (
+    <div className="container mt-4">
+      <div className="row justify-content-center g-4">
+        {movies.map((movie) => (
+          <div key={movie.id} className="col-sm-6 col-md-4 col-lg-3 d-flex mb-4">
+            {/* d-flex assure que MovieCard ait une hauteur uniforme si tu veux */}
+            <MovieCard movie={movie} onDelete={handleDelete} />
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
 
 export default MovieList;
