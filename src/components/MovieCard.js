@@ -11,12 +11,18 @@ const MovieCard = ({ movie, onDelete }) => {
 
         {/* Conteneur centré pour les boutons */}
         <div className="d-flex justify-content-center gap-3 mt-3">
-          <button className="btn btn-outline-danger px-3" onClick={() => onDelete(movie.id)}>
-            <i className="fas fa-trash-alt me-1"></i> Supprimer
-          </button>
-          <Link to={`/movie/${movie.id}`} className="btn btn-outline-info px-3">
-            <i className="fas fa-info-circle me-1"></i> Voir détails
-          </Link>
+        <button
+  className="btn btn-outline-danger px-2 py-1"
+  style={{ fontSize: '0.8rem' }}
+  onClick={() => onDelete(movie.id)}
+>
+  <i className="fas fa-trash-alt me-1"></i> Supprimer
+</button>
+
+<Link to={`/movie/${movie.id}`} className="btn btn-outline-info btn-sm px-2">
+  <i className="fas fa-info-circle me-1"></i> Voir détails
+</Link>
+
         </div>
       </div>
     </div>
